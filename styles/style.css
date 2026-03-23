@@ -19,6 +19,9 @@ body {
 /* *************************************************************************** */
 
 /* **✈️ HEADER ✈️ ** */
+.nav__bigScreen{
+    display: none;
+}
 
 header {
     height: 100vh;
@@ -255,13 +258,75 @@ p {
     }
 }
 
+.legacy__grid .legacy__grid__link:nth-of-type(12) .legacy__grid__cell{
+        background-color: rgb(32, 32, 32);
+        color: #FFF;
+        span {
+            color: #FFF;
+        }
+        p{
+            color: #FFF;
+        }
+}
 
+.footer{
+    padding: 10px 20px;
+    background-color: rgb(32, 32, 32);
+    text-align: center;
+    color: #FFF;
+    
+    a{
+        color: #FFF;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+
+    h4{
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+
+    p{
+        color: #FFF;
+        margin-top: 70px;
+        font-size: 14px;
+    }
+}
+
+.footer__location{
+    margin-bottom: 50px;
+}
+
+.fa-thin .fa-location-dot {
+    color: #FFF;
+    display: inline-block;
+}
+
+.fa-brands{
+    font-size: 30px;
+}
+
+.call__fixed{
+    position: sticky;
+    bottom: 0;
+    background-color: #074c9b;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+}
 /* 🐸🐸🐸🐸 RESPONSIVE 🐸🐸🐸🐸 */
 
 @media screen and (min-width:900px) {
 
     nav {
         position: fixed;
+    }
+
+    .call__fixed{
+        display: none;
     }
 
     .hero__link {
@@ -334,6 +399,7 @@ p {
         span {
             font-weight: bolder;
         }
+        
     }
 
     .meet {
@@ -346,15 +412,157 @@ p {
         }
     }
 
-    .legacy__grid {
+    .legacy {
         text-align: left;
         padding: 30px 20px;
+
+    }
+
+    .legacy__grid {
+        text-align: left;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .legacy__grid__cell:nth-of-type(12){
-        background-color: rgb(66, 66, 66);
+
+
+    .footer__location--grid{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap:40px;
+        padding: 20px;
+        max-width: 600px;
+        margin:0 auto;
+        text-align: center;
     }
 
+    .footer__location:last-child{
+        grid-column: 1/-1;
+        max-width: 50%;
+        margin: 0 auto 50px;
+    }
+
+    .footer{
+        align-items: center;
+        margin-bottom: 0;
+        p{
+            margin-top: 20px;
+        };
+        img{
+            display: block;
+            margin:20px auto;
+            width: 400px;
+        }
+    }
+
+    .logo{
+        flex: 1 0 33.33%;
+        text-align: center
+    }
+    .footer__icons{
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media screen and (min-width:1370px){
+    .burgerMenu{
+        display: none;
+    }
+    .nav__bigScreen{
+        display: flex;        
+        font-size: 20px;
+        font-weight: 600;
+        gap: 20px;
+        padding: 0 20px;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+            color: #074c9b;
+        }
+        a:hover{
+            border-bottom: 2px solid #074c9b;
+        }
+
+        a:last-of-type{
+            border-radius: 100%;
+            padding: 10px;
+        }
+        
+        a:last-of-type:hover{
+            background-color: #074c9b;
+            color: #FFF;
+            border-radius: 100%;
+            padding: 10px;
+        }
+    }
+
+    nav img{
+        width: 20%;
+    }
+
+    .wrapper{
+        padding: 0 250px;
+    }
+
+    .about{
+        display: flex;
+        .p--blue{
+            font-size: 18px;
+        }
+        h2{
+            font-size: 60px;
+        }
+    }
+
+    .meet{
+        display: flex;
+        padding: 50px 250px;
+        justify-content: center;
+        
+        img{
+            width: 30%;
+        }
+        & div{
+            width: 50%;
+            padding: 10px 10px;
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .legacy{
+        margin: 0 0 50px;
+        h2{
+            font-size: 60px;
+        }
+
+        p:nth-of-type(2) {
+            margin: 0 0 50px;
+        }
+        
+    }
+    .legacy__grid {
+        text-align: left;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer__location--grid{
+        display: flex;
+        justify-content: center;
+        gap:100px;
+        padding: 30px 40px;
+        align-items: flex-start;
+
+    }
+
+    .footer__location{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    
 
 }
