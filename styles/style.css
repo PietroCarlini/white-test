@@ -50,7 +50,7 @@ header::before {
     z-index: 1;
 }
 
-nav {
+.navbar__home {
     background-color: #FFF;
     width: 100vw;
     position: absolute;
@@ -317,6 +317,54 @@ p {
     font-size: 18px;
     padding: 15px;
 }
+
+
+/* ......CONTACT........ */
+.nav__contact{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.form{
+    padding: 80px 30px;
+    text-align: center;
+    display: grid;
+    grid-area: 
+    "small small"
+    "medium medium"
+    "medium"
+    "medium"
+    "medium"
+    ;
+    h2{
+        font-size: 22px;
+    }
+    h4{
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+
+.first-name, .last-name{
+    grid-area: small;
+    
+}
+.e-mail, .phone, .message{
+    grid-area: medium;
+}
+
+
+
+
+
+
+
 /* 🐸🐸🐸🐸 RESPONSIVE 🐸🐸🐸🐸 */
 
 @media screen and (min-width:900px) {
@@ -478,9 +526,10 @@ p {
 
         a{
             text-decoration: none;
-            color: #074c9b;
+            color: #000000;
         }
         a:hover{
+            color: #074c9b;
             border-bottom: 2px solid #074c9b;
         }
 
